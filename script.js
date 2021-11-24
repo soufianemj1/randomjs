@@ -3,6 +3,8 @@ document.getElementById('tables').style.display = 'none';
 let now = moment();
 
 
+
+
 function save() {
     document.getElementById('tables').style.display = 'flex';
     let nameinput = document.getElementById('name').value;
@@ -44,18 +46,26 @@ function random() {
     var i = 0;
     var randStudent = new Array();
     var projectday = new Array();
+    var skipe = moment(projectday);
+    
+    
     
     i = Math.floor(Math.random() * (max));
     randStudent.push(student[i]);
     student.splice(i, 1);
-    // if(moment().day() == 4){
+
+
+   
+    
+
+    // if(skipe == 4){
     //     projectday.push(now.add(3, 'days').format('DD-MM-YYYY'));
-    // }else if(moment().day()==5){
+    // }else if(skipe == 5){
     //     projectday.push(now.add(2, 'days').format('DD-MM-YYYY'));
     // }else{
     //     projectday.push(now.add(1, 'days').format('DD-MM-YYYY'));
     // }
-    for()
+    // console.log(projectday)
 
     projectday.push(now.add(1, 'days').format('DD-MM-YYYY'));
     
@@ -65,6 +75,6 @@ function random() {
         cell23.innerHTML = projectday[f];
         
     }
-   console.log(moment().day());
+   
 
 }
